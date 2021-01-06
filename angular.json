@@ -111,6 +111,78 @@
           }
         }
       }
+    },
+    "web-components": {
+      "projectType": "library",
+      "schematics": {
+        "@nxext/stencil:component": {
+          "style": "scss",
+          "storybook": false
+        }
+      },
+      "root": "libs/web-components",
+      "sourceRoot": "libs/web-components/src",
+      "architect": {
+        "test": {
+          "builder": "@nxext/stencil:test",
+          "options": {
+            "projectType": "library",
+            "configPath": "libs/web-components/stencil.config.ts"
+          }
+        },
+        "e2e": {
+          "builder": "@nxext/stencil:e2e",
+          "options": {
+            "projectType": "library",
+            "configPath": "libs/web-components/stencil.config.ts"
+          }
+        },
+        "build": {
+          "builder": "@nxext/stencil:build",
+          "options": {
+            "projectType": "library",
+            "configPath": "libs/web-components/stencil.config.ts"
+          }
+        },
+        "serve": {
+          "builder": "@nxext/stencil:build",
+          "options": {
+            "projectType": "library",
+            "configPath": "libs/web-components/stencil.config.ts",
+            "serve": true,
+            "watch": true
+          }
+        }
+      }
+    },
+    "web-components-angular": {
+      "projectType": "library",
+      "root": "libs/web-components-angular",
+      "sourceRoot": "libs/web-components-angular/src",
+      "prefix": "my-workspace",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/web-components-angular/tsconfig.lib.json",
+              "libs/web-components-angular/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/web-components-angular/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web-components-angular"],
+          "options": {
+            "jestConfig": "libs/web-components-angular/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

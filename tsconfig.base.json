@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@my-workspace/web-components": ["libs/web-components/src/index.ts"],
+      "@my-workspace/web-components-angular": [
+        "libs/web-components-angular/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

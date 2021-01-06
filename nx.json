@@ -29,6 +29,12 @@
     "my-app-e2e": {
       "tags": [],
       "implicitDependencies": ["my-app"]
+    },
+    "web-components": {
+      "tags": []
+    },
+    "web-components-angular": {
+      "tags": []
     }
   }
 }
