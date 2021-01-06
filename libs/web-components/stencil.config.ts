@@ -12,11 +12,18 @@ export const config: Config = {
   taskQueue: 'async',
   plugins: [sass()],
   outputTargets: [
-    angularOutputTarget({
-      componentCorePackage: '@my-workspace/web-components',
-      directivesProxyFile:
-        '......libsweb-components-angular/src/generated/directives/proxies.ts',
-      valueAccessorConfigs: angularValueAccessorBindings,
-    }),
+    {
+      type: 'dist',
+      esmLoaderPath: '../loader',
+      dir: '../../dist/libs/web-components/dist',
+    },
+    {
+      type: 'docs-readme',
+    },
+    {
+      type: 'www',
+      dir: '../../dist/libs/web-components/www',
+      serviceWorker: null, // disable service workers
+    },
   ],
 };
