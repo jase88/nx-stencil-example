@@ -18,12 +18,18 @@ export const config: Config = {
       dir: '../../dist/libs/web-components/dist',
     },
     {
-      type: 'docs-readme',
+      type: 'docs-readme'
     },
     {
       type: 'www',
       dir: '../../dist/libs/web-components/www',
-      serviceWorker: null, // disable service workers
+      serviceWorker: null // disable service workers
     },
+    angularOutputTarget({
+      componentCorePackage: '@my-workspace/web-components',
+      directivesProxyFile:
+        '......libsweb-components-angular/src/generated/directives/proxies.ts',
+      valueAccessorConfigs: angularValueAccessorBindings,
+    }),
   ],
 };
