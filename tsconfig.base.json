@@ -16,6 +16,9 @@
     "baseUrl": ".",
     "paths": {
       "@my-workspace/web-components": ["libs/web-components/src/index.ts"],
+      "@my-workspace/web-components/loader": [
+        "dist/libs/web-components/loader"
+      ],
       "@my-workspace/web-components-angular": [
         "libs/web-components-angular/src/index.ts"
       ]
