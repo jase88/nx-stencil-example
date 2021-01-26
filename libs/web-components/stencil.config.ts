@@ -10,7 +10,9 @@ const angularValueAccessorBindings: ValueAccessorConfig[] = [];
 export const config: Config = {
   namespace: 'web-components',
   taskQueue: 'async',
-  plugins: [sass()],
+  plugins: [sass({
+    injectGlobalPaths: ['src/globals/variables.scss']
+  })],
   outputTargets: [
     {
       type: 'dist',
