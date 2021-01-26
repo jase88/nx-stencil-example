@@ -28,7 +28,7 @@ export const config: Config = {
     angularOutputTarget({
       componentCorePackage: '@my-workspace/web-components',
       directivesProxyFile:
-        '......libsweb-components-angular/src/generated/directives/proxies.ts',
+        '../../../libs/web-components-angular/src/generated/directives/proxies.ts',
       valueAccessorConfigs: angularValueAccessorBindings,
     }),
   ],
