@@ -10,9 +10,11 @@ const angularValueAccessorBindings: ValueAccessorConfig[] = [];
 export const config: Config = {
   namespace: 'web-components',
   taskQueue: 'async',
-  plugins: [sass({
-    injectGlobalPaths: ['src/globals/variables.scss']
-  })],
+  plugins: [
+    sass({
+      injectGlobalPaths: ['src/globals/variables.scss'],
+    }),
+  ],
   outputTargets: [
     {
       type: 'dist',
@@ -20,12 +22,12 @@ export const config: Config = {
       dir: '../../dist/libs/web-components/dist',
     },
     {
-      type: 'docs-readme'
+      type: 'docs-readme',
     },
     {
       type: 'www',
       dir: '../../dist/libs/web-components/www',
-      serviceWorker: null // disable service workers
+      serviceWorker: null, // disable service workers
     },
     angularOutputTarget({
       componentCorePackage: '@my-workspace/web-components',
