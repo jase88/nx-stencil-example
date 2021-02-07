@@ -55,7 +55,7 @@
     "@nrwl/eslint-plugin-nx": "11.0.20",
     "@nrwl/jest": "11.0.20",
     "@nrwl/tao": "11.0.20",
-    "@nrwl/workspace": "11.0.20",
+    "@nrwl/workspace": "^11.2.10",
     "@nxext/stencil": "^11.0.0",
     "@stencil/angular-output-target": "^0.0.5",
     "@stencil/core": "^2.3.0",
