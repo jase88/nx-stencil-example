@@ -1,1 +1,1 @@
-export * from './lib/lib-a';
+export const libA = 'Hello, World!';
