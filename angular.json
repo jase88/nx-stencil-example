@@ -183,6 +183,27 @@
           }
         }
       }
+    },
+    "lib-a": {
+      "root": "libs/lib-a",
+      "sourceRoot": "libs/lib-a/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/lib-a/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/lib-a"],
+          "options": {
+            "jestConfig": "libs/lib-a/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

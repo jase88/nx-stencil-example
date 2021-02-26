@@ -21,7 +21,8 @@
       ],
       "@my-workspace/web-components-angular": [
         "libs/web-components-angular/src/index.ts"
-      ]
+      ],
+      "@my-workspace/lib-a": ["libs/lib-a/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
